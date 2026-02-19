@@ -23,6 +23,8 @@
         "/^cd /workspaces/flai-workshop-github-copilot-800 && source octofit-tracker/backend/venv/bin/activate && python octofit-tracker/backend/manage\\.py check$/": {
             "approve": true,
             "matchCommandLine": true
-        }
+        },
+        "npx create-react-app": true,
+        "npm install": true
     }
 }
