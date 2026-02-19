@@ -29,6 +29,17 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+# Trust the X-Forwarded-Host header from Codespaces proxy
+USE_X_FORWARDED_HOST = True
+USE_X_FORWARDED_PORT = True
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+# CSRF Settings for Codespaces
+if os.environ.get('CODESPACE_NAME'):
+    CSRF_TRUSTED_ORIGINS = [
+        f"https://{os.environ.get('CODESPACE_NAME')}-8000.app.github.dev"
+    ]
+
 
 # Application definition
 
