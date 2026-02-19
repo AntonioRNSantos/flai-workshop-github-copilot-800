@@ -2,6 +2,13 @@
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
+
+REST API endpoints are configured to work with GitHub Codespaces URLs:
+- Format: https://$CODESPACE_NAME-8000.app.github.dev/api/[component]/
+- Example: https://$CODESPACE_NAME-8000.app.github.dev/api/activities/
+
+The API automatically generates correct URLs based on request headers and settings.py configuration.
+
 Examples:
 Function views
     1. Add an import:  from my_app import views
